@@ -5,7 +5,6 @@ Toto jsou podklady pro video lekce pro 12. týden online kurzu Staň se kóderko
 Tento týden se budemě věnovat těmto oblastem:
 - **Eleventy** - ukážeme si, jak si do Eleventy přidat vlastní filtry, jak generovat stránky z dat a jak do webu připojit jdnoduchý redakční systém Netlify CMS
 - **Sass** - popíšeme si, co jsou mixiny a jak díky nim můžeme zjednodušit psaní často opakovaných kousků kódu
-- **Favicon** - jak přidat k webu ikonku
 
 
 ## Stažení podkladů
