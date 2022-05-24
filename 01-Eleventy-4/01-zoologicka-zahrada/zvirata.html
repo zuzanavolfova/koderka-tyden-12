@@ -9,15 +9,13 @@ title: Zvířata
 
 
 <div class="animals">
-
-
+	{% for zvire in zvirata  %}
 	<div class="animal">
-		<img class="animal__foto" src="/images/ara.jpg" alt="">
+		<img class="animal__foto" src="/images/{{zvire.foto}}" alt="{{zvire.nazev}}">
 		<div class="animal__content">
-			<h2>Název zvířete</h2>
-			<p><a href="#">Podrobný popis</a></p>
+			<h2>{{zvire.nazev}} </h2>
+			<p><a href="/zvirata/{{zvire.nazev | slug }}/">Podrobný popis</a></p>
 		</div>
 	</div>
-
-
+	{% endfor %}
 </div>

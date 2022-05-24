@@ -21,9 +21,16 @@ h1, h2, h3 {
 	color: $doplnkova;
 }
 
+@mixin center {
+	display: grid;
+	place-content: center;
+}
 
 .header {
 	border: 10px solid $primarni;
+	min-height: 300px;
+
+	@include center;
 
 	&__title {
 		color: $primarni;
@@ -87,6 +94,11 @@ h1, h2, h3 {
 
 
 
+@mixin grid($sloupce, $mezera: 20px){
+	display: grid;
+	grid-template-columns: repeat($sloupce, 1fr);
+	gap: $mezera;
+}
 
 
 .sloupec {
@@ -96,13 +108,37 @@ h1, h2, h3 {
 	font-weight: bold;
 }
 
+.tri-sloupce {
+	@include grid(3, 20px);
+}
+
+.pet-sloupcu {
+	@include grid(5, 10px);
+}
 
 
 
+@mixin tablet {
+	@media screen and (min-width: 400px){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 900px){
+	@content;	
+	}
+}
 
 .box {
 	min-height: 150px;
 	padding: 20px;
 	color: white;
 	background-color: lightseagreen;
+	@include tablet {
+		background-color:#ff8833;
+	}
+	@include desktop {
+		background-color: aqua;
+	}
 }

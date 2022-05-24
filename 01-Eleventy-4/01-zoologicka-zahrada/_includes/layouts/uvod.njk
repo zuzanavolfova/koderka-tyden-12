@@ -24,7 +24,17 @@ layout: layouts/hlavni-sablona.njk
 
 		<h2>Nejnovější články na blogu</h2>
 
-		<p>Připravujeme...</p>
+		{% for prispevek in collections.blog | reverse | limit(2) %}
+
+		<article class="clanek">
+
+			<h2>{{ prispevek.data.title | upper}}</h2>
+			<p>{{ prispevek.data.perex }}</p>
+			<p><a href="{{ prispevek.url }}">celý článek</a></p>
+
+		</article>
+
+		{% endfor %}
 
 	</aside>
 

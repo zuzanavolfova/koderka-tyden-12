@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Georgia, serif;
+}
+
+h1, h2, h3 {
+  color: #ff8833;
+}
+
+.header {
+  border: 10px solid #008833;
+  min-height: 300px;
+  display: grid;
+  place-content: center;
+}
+.header__title {
+  color: #008833;
+  margin-top: 0;
+}
+.header__subtitle {
+  margin-bottom: 0;
+  color: #a0a0a0;
+}
+
+.menu {
+  background-color: #008833;
+}
+.menu__list {
+  margin: 0;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.menu__item:not(:last-child) {
+  border-right: 1px solid white;
+}
+.menu__link {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu__link:hover, .menu__link:focus {
+  background-color: white;
+  color: #008833;
+}
+
+.main {
+  margin: 20px 0;
+  padding: 20px;
+  border: 3px solid #a0a0a0;
+  overflow: auto;
+}
+
+.footer {
+  background-color: #a0a0a0;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.sloupec {
+  padding: 20px;
+  background-color: lightsalmon;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tri-sloupce {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pet-sloupcu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.box {
+  min-height: 150px;
+  padding: 20px;
+  color: white;
+  background-color: lightseagreen;
+}
+@media screen and (min-width: 400px) {
+  .box {
+    background-color: #ff8833;
+  }
+}
+@media screen and (min-width: 900px) {
+  .box {
+    background-color: aqua;
+  }
+}/*# sourceMappingURL=style.css.map */
